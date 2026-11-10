@@ -4499,3 +4499,21 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
   .index-features ul { height: auto; overflow: visible; }
   .index-features li { grid-area: auto; }
 }
+
+/* Repair: scroll-driven scenes shown settled, in normal flow */
+.index { height: auto !important; margin-bottom: 0 !important; }
+.index section { visibility: visible; }
+.index-hero { visibility: visible; }
+@media (min-width: 760px) {
+  .index-hero { height: 100svh; }
+  .index-hero > .index-hero-video:last-of-type { display: none; }
+}
+.index-intro-line, .index-intro-word,
+.index-how-heading, .index-how li,
+.index-difference li, .index-difference h2,
+.index-testimonials-head, .index-testimonials-head *,
+.index-moneypedia h2, .index-moneypedia h3, .index-moneypedia h4,
+.index-investors h2, .index-investors ul, .index-investors li {
+  transform: none !important; opacity: 1 !important; visibility: visible !important;
+}
+.index-how-heading { color: #fff !important; }
