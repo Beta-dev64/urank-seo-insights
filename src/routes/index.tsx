@@ -560,7 +560,7 @@ function ImportedSection2() {
     window.addEventListener("resize", onScroll);
     return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
   }, []);
-  const s = PRODUCT_STEPS[step];
+  const s = PRODUCT_STEPS[step] ?? PRODUCT_STEPS[0]!;
   return (
     <section ref={ref} data-step={s.key} style={{ visibility: "inherit", "--bg": s.bg, "--color": s.color, "--nav": s.color, "--accent": s.accent } as CSSProperties} className="index-product place-content-center relative [background-color:var(--bg)] [min-height:100svh] [@media(max-width:759px)]:[width:100vw] [opacity:1]" id="index-product">
       <div className="index-product-feature items-center absolute capitalize [flex-shrink:0] [inset:0px] [letter-spacing:-0.168rem]">
