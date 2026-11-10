@@ -4493,3 +4493,9 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
 
 
 
+
+/* Repair: scroll-pinned phone feature panels shown in normal flow */
+@media (max-width: 759px) {
+  .index-features ul { height: auto; overflow: visible; }
+  .index-features li { grid-area: auto; }
+}
