@@ -4538,3 +4538,16 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
   .index-product[data-step="four"] .index-product-nav [data-four] i { opacity: 1 !important; }
 }
 @media (max-width: 759px) { .index-product-track { display: contents; } }
+
+/* Repair: settled states for hero video, intro, testimonials, investors */
+.index-hero > .index-hero-video:first-of-type { transform: none !important; }
+@media (max-width: 759px) {
+  .index-hero > .index-hero-video:first-of-type { clip-path: none; left: 0; width: 100%; height: 100%; }
+}
+@media (min-width: 760px) {
+  .index-intro { background-color: rgb(252, 248, 232); height: auto; min-height: 75svh; padding: 10rem 0; }
+  .index-intro-paragraph { top: 0; color: rgb(38, 18, 10); }
+}
+.index-testimonials, .index-investors { opacity: 1 !important; visibility: visible !important; }
+.index-testimonials-list { transform: none !important; }
+.index-investors li { transform: none !important; }

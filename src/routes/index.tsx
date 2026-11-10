@@ -702,7 +702,7 @@ function ImportedSectionFundLifeChangingGoals() {
 
 function ImportedSectionRealImpactRealStories() {
   return (
-    <section className="index-testimonials relative [@media(max-width:759px)]:[background-color:rgb(252,248,232)] [@media(max-width:759px)]:[width:100vw] [opacity:0] invisible">
+    <section className="index-testimonials relative [@media(max-width:759px)]:[background-color:rgb(252,248,232)] [@media(max-width:759px)]:[width:100vw]">
       <div className="index-testimonials-head justify-between [@media(max-width:759px)]:flex-col [@media(max-width:759px)]:[gap:2rem]">
         <h2 className="relative capitalize [color:rgb(37,19,12)] [flex-shrink:0] [z-index:1]">Real Impact,<br />Real stories</h2>
         <p className="relative [color:rgb(37,19,12)] [z-index:1]">See how rank help users Every on-time contribution builds your credit history and supports your financial future.</p>
@@ -1032,7 +1032,7 @@ function ImportedSectionMoneypedia() {
 
 function ImportedSectionHearDirectlyFromOur() {
   return (
-    <section className="index-investors items-center justify-between relative [@media(max-width:759px)]:flex-col [@media(max-width:759px)]:[background-color:rgb(89,14,35)] [@media(max-width:759px)]:[width:100vw] [opacity:0] invisible">
+    <section className="index-investors items-center justify-between relative [@media(max-width:759px)]:flex-col [@media(max-width:759px)]:[background-color:rgb(89,14,35)] [@media(max-width:759px)]:[width:100vw]">
       <h2 className="capitalize [color:rgb(214,202,224)] [flex-shrink:0]">Hear Directly from Our Investors</h2>
       <ul className="gap-[1.2rem] [@media(max-width:759px)]:flex-col [@media(max-width:759px)]:w-[36.1rem]">
         <li className="active items-start self-stretch gap-[1.8rem] [background-color:var(--bg)] [overflow:hidden] [transition:width_0.5s] [@media(max-width:759px)]:flex-col [translate:none] [rotate:none] [scale:none]" style={{ "--bg": "#e2f86c", transform: "translate(50vw, 0px)" } as CSSProperties}>
