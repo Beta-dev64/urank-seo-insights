@@ -15,7 +15,7 @@ function Index() {
     <>
       <style>{capturedCSS}</style>
       <div id="__nuxt">
-        <div className="viewport preloading">
+        <div className="viewport">
           <ImportedHeader />
           <main className="index page [background-color:var(--bg)] [min-height:100svh]" style={{ "--bg": "#26120a" } as CSSProperties}>
             <ImportedSectionTheMoneyAppFor />
