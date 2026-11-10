@@ -158,7 +158,7 @@ function ImportedSectionTheMoneyAppFor() {
   return (
     <section className="index-hero relative [@media(max-width:759px)]:flex-col [@media(max-width:759px)]:[contain:paint] [@media(max-width:759px)]:[gap:1rem] [@media(max-width:759px)]:[width:100vw] [@media(max-width:759px)]:[z-index:1] [opacity:1]" style={{ visibility: "inherit" } as CSSProperties}>
       <figure className="index-hero-video pointer-events-none [overflow:hidden] [translate:none] [rotate:none] [scale:none] [opacity:1] [visibility:inherit]" style={{ transform: "translate(0px, 0px)" }}>
-        <video className="[translate:none] [rotate:none] [scale:none]" style={{ transform: "translate(0px, 0px)" }} src="https://d1gnv2hlf8xjpe.cloudfront.net/IMG_6162_nrm77b.mp4" playsInline muted preload="auto" loop autoPlay />
+        <video className="[translate:none] [rotate:none] [scale:none]" style={{ transform: "translate(0px, 0px)" }} src="/__l5e/assets-v1/8e565c03-0377-48cd-a8d2-02fffefcc6f8/hero_portrait.mp4" playsInline muted preload="auto" loop autoPlay />
         <aside className="[translate:none] [rotate:none] [scale:none]" style={{ backgroundColor: "rgba(38, 18, 10, 0.3)", transform: "translate(0px, 0px)" }} />
       </figure>
       <div className="index-hero-head relative">
@@ -187,7 +187,7 @@ function ImportedSectionTheMoneyAppFor() {
         <div className="gap-[0.6rem] [color:rgb(255,255,255)]"> Licensed by CBN <img src="/site-assets/4e1aa712e83a3943-948b9543803f5b1408a2609656aa3044.png" alt="" /><i className="[color:rgba(255,255,255,0.5)]">・</i> Insured by <img src="/site-assets/1a1f66afd875f6a8.png" alt="" /></div>
       </div>
       <figure className="index-hero-video pointer-events-none [overflow:hidden] [translate:none] [rotate:none] [scale:none] [opacity:0] invisible" style={{ transform: "translate(0px, 0px)" }}>
-        <video className="[translate:none] [rotate:none] [scale:none]" style={{ transform: "translate(0px, 0px)" }} src="https://d1gnv2hlf8xjpe.cloudfront.net/IMG_6162_nrm77b.mp4" playsInline muted preload="auto" loop autoPlay />
+        <video className="[translate:none] [rotate:none] [scale:none]" style={{ transform: "translate(0px, 0px)" }} src="/__l5e/assets-v1/8e565c03-0377-48cd-a8d2-02fffefcc6f8/hero_portrait.mp4" playsInline muted preload="auto" loop autoPlay />
         <aside className="[translate:none] [rotate:none] [scale:none]" style={{ backgroundColor: "rgba(38, 18, 10, 0.3)", transform: "translate(0px, 0px)" }} />
       </figure>
     </section>
@@ -687,7 +687,7 @@ function ImportedSectionRealImpactRealStories() {
         <div className="[cursor:grab]">
           <li className="active relative select-none" style={{ transform: "translateX(0px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(-11.9948rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony1-2_dslvkv.webm" poster="/site-assets/7b0f1d7e1377ca69.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/4980d314-9328-43f5-8fb8-ac8e29d03983/testimony_one.webm" poster="/site-assets/7b0f1d7e1377ca69.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute visible! [bottom:-4rem] [left:0px] [opacity:1]! [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
@@ -714,7 +714,7 @@ function ImportedSectionRealImpactRealStories() {
           </li>
           <li className="relative select-none" style={{ transform: "translateX(0px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(-9.2967rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony_2-1_iayjdw.webm" poster="/site-assets/c899bb373f3ae780.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/6404a88b-557d-4a6c-add3-4884059a8485/testimony_two.webm" poster="/site-assets/c899bb373f3ae780.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute [bottom:-4rem] [left:0px] [opacity:0] [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
@@ -741,7 +741,7 @@ function ImportedSectionRealImpactRealStories() {
           </li>
           <li className="relative select-none" style={{ transform: "translateX(0px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(-1.38441rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony3-1_rezkf5.webm" poster="/site-assets/db6151440dcd191e.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/4d4d2e85-ac5b-47eb-b04e-a0eda3660de9/testimony_three.webm" poster="/site-assets/db6151440dcd191e.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute [bottom:-4rem] [left:0px] [opacity:0] [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
@@ -768,7 +768,7 @@ function ImportedSectionRealImpactRealStories() {
           </li>
           <li className="relative select-none" style={{ transform: "translateX(0px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(9.80485rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony1-2_dslvkv.webm" poster="/site-assets/7b0f1d7e1377ca69.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/4980d314-9328-43f5-8fb8-ac8e29d03983/testimony_one.webm" poster="/site-assets/7b0f1d7e1377ca69.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute [bottom:-4rem] [left:0px] [opacity:0] [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
@@ -795,7 +795,7 @@ function ImportedSectionRealImpactRealStories() {
           </li>
           <li className="relative select-none" style={{ transform: "translateX(-2323.12px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(-0.544493rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony_2-1_iayjdw.webm" poster="/site-assets/c899bb373f3ae780.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/6404a88b-557d-4a6c-add3-4884059a8485/testimony_two.webm" poster="/site-assets/c899bb373f3ae780.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute [bottom:-4rem] [left:0px] [opacity:0] [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
@@ -822,7 +822,7 @@ function ImportedSectionRealImpactRealStories() {
           </li>
           <li className="relative select-none" style={{ transform: "translateX(-2323.12px)" }}>
             <figure className="[overflow:visible]" style={{ transform: "translateY(-8.81816rem)" }}>
-              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="https://d1gnv2hlf8xjpe.cloudfront.net/Testimony3-1_rezkf5.webm" poster="/site-assets/db6151440dcd191e.webp" preload="auto" />
+              <video className="[background-color:rgb(247,117,0)]" loop playsInline src="/__l5e/assets-v1/4d4d2e85-ac5b-47eb-b04e-a0eda3660de9/testimony_three.webm" poster="/site-assets/db6151440dcd191e.webp" preload="auto" />
               <div className="index-testimonials-cta items-center gap-[0.8rem] pointer-events-none absolute [bottom:-4rem] [left:0px] [opacity:0] [right:0px] [transition:opacity_0.3s] [width:fit-content] [z-index:3]">
                 <button className="bg-transparent h-[2.8rem] w-[2.8rem] [border-color:currentcolor] [border-image:none] [border-style:none] [border-width:medium] [cursor:pointer] [padding:0px] [pointer-events:all] [transition:transform_.2s_var(--ease-button)]">
                   <img className="[grid-area:1/1] [transition:transform_0.2s]" src="/site-assets/ec8e6294de3fd750-6ee95ccc3a20ccaf83fd73eca438acf0.png" alt="Play" />
