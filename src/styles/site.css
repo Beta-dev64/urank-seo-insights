@@ -4551,3 +4551,25 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
 .index-testimonials, .index-investors { opacity: 1 !important; visibility: visible !important; }
 .index-testimonials-list { transform: none !important; }
 .index-investors li { transform: none !important; }
+
+/* Repair: menu open state */
+.viewport:not(.menu-open) .header-menu { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+.viewport.menu-open .header-menu, .viewport.menu-open .header-menu * { opacity: 1 !important; visibility: visible !important; }
+.viewport.menu-open .header-menu-grid > a, .viewport.menu-open .header-menu-links :is(a, p) { transform: none !important; clip-path: none !important; transition: opacity .4s ease; }
+.viewport.menu-open .header-ham i:first-of-type { transform: translateY(0.7rem) rotate(45deg) !important; }
+.viewport.menu-open .header-ham i:last-of-type { transform: translateY(-0.7rem) rotate(-45deg) !important; }
+.viewport.menu-open .header-ham i:nth-of-type(2) { opacity: 0; }
+.header-ham i { transition: transform .3s ease; }
+@media (max-width: 759px) {
+  .viewport.menu-open .header-ham i:first-of-type { transform: translateY(0.52rem) rotate(45deg) !important; }
+  .viewport.menu-open .header-ham i:last-of-type { transform: translateY(-0.52rem) rotate(-45deg) !important; }
+}
+
+/* Repair: testimonial carousel */
+.index-testimonials-list li { left: 0 !important; transform: none !important; }
+.index-testimonials-list > div { transition: transform .5s cubic-bezier(.4,0,.2,1); transform: translateX(calc(50vw - 18.15rem - var(--slide, 0) * 36.3rem)); }
+.index-testimonials-list li:not(.active) figure { opacity: .6; }
+.index-testimonials-list li figure { transition: opacity .4s; }
+@media (max-width: 759px) {
+  .index-testimonials-list > div { transform: translateX(calc(0rem - var(--slide, 0) * 39.93rem)); }
+}

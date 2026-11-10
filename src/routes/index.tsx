@@ -11,11 +11,62 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   useImportedLayout();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    const ham = document.querySelector<HTMLButtonElement>(".header-ham");
+    ham?.setAttribute("aria-expanded", String(menuOpen));
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") { setMenuOpen(false); ham?.focus(); } };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+  useEffect(() => {
+    const items = document.querySelectorAll<HTMLLIElement>(".index-testimonials-list li");
+    items.forEach((li, i) => {
+      li.classList.toggle("active", i === slide);
+      if (i !== slide) li.querySelector("video")?.pause();
+    });
+  }, [slide]);
+  const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const t = e.target as HTMLElement;
+    if (t.closest(".header-ham")) { setMenuOpen((o) => !o); return; }
+    if (menuOpen && t.closest(".header-menu a")) { setMenuOpen(false); return; }
+    if (menuOpen && t.closest(".header-menu") && !t.closest(".header-menu-grid, .header-menu-links")) { setMenuOpen(false); return; }
+    const faq = t.closest<HTMLLIElement>(".footer-faq li");
+    if (faq) {
+      const was = faq.classList.contains("active");
+      faq.parentElement?.querySelectorAll("li").forEach((li) => li.classList.remove("active"));
+      if (!was) faq.classList.add("active");
+      return;
+    }
+    const ctrl = t.closest<HTMLButtonElement>(".index-testimonials-controls button");
+    if (ctrl) {
+      const n = document.querySelectorAll(".index-testimonials-list li").length || 1;
+      const isPrev = ctrl === ctrl.parentElement?.firstElementChild;
+      setSlide((i) => (i + (isPrev ? -1 : 1) + n) % n);
+      return;
+    }
+    const btn = t.closest<HTMLButtonElement>(".index-testimonials-cta button, .index-testimonials-fs button");
+    if (btn) {
+      const fig = btn.closest("figure");
+      const video = fig?.querySelector("video");
+      if (!fig || !video) return;
+      const idx = Array.from(btn.parentElement?.children ?? []).indexOf(btn);
+      if (idx === 0) {
+        if (video.paused) { video.muted = false; void video.play().catch(() => { video.muted = true; void video.play(); }); }
+        else video.pause();
+      } else if (idx === 1) { video.currentTime = Math.max(0, video.currentTime - 10); }
+      else if (document.fullscreenElement) void document.exitFullscreen();
+      else void fig.requestFullscreen?.().catch(() => {});
+      fig.classList.toggle("playing", !video.paused);
+    }
+  };
   return (
     <>
       <style>{capturedCSS}</style>
-      <div id="__nuxt">
-        <div className="viewport">
+      <div id="__nuxt" onClick={onClick}>
+        <div className={menuOpen ? "viewport menu-open" : "viewport"} style={{ "--slide": slide } as CSSProperties}>
           <ImportedHeader />
           <main className="index page [background-color:var(--bg)] [min-height:100svh]" style={{ "--bg": "#26120a" } as CSSProperties}>
             <ImportedSectionTheMoneyAppFor />
