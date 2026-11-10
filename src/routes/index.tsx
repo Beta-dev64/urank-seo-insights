@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/site.css?raw";
 
@@ -20,7 +20,7 @@ function Index() {
           <main className="index page [background-color:var(--bg)] [min-height:100svh]" style={{ "--bg": "#26120a" } as CSSProperties}>
             <ImportedSectionTheMoneyAppFor />
             <ImportedSection />
-            <div>
+            <div className="index-product-track">
               <ImportedSection2 />
             </div>
             <ImportedSectionFundLifeChangingGoals />
@@ -536,9 +536,33 @@ function ImportedSection() {
   );
 }
 
+const PRODUCT_STEPS = [
+  { key: "one", bg: "rgb(247,117,0)", color: "#fff", accent: "#663000" },
+  { key: "two", bg: "rgb(214,202,224)", color: "#590e23", accent: "#d6cae0" },
+  { key: "three", bg: "rgb(226,248,108)", color: "#154347", accent: "#e2f86c" },
+  { key: "four", bg: "rgb(201,225,238)", color: "#154347", accent: "#c9e1ee" },
+];
+
 function ImportedSection2() {
+  const ref = useRef<HTMLElement>(null);
+  const [step, setStep] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const track = ref.current?.parentElement;
+      if (!track) return;
+      const r = track.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      const p = span > 0 ? Math.min(0.999, Math.max(0, -r.top / span)) : 0;
+      setStep(Math.floor(p * PRODUCT_STEPS.length));
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
+  }, []);
+  const s = PRODUCT_STEPS[step];
   return (
-    <section className="index-product place-content-center relative [background-color:var(--bg)] [min-height:100svh] [@media(max-width:759px)]:[width:100vw] [opacity:1]" style={{ visibility: "inherit" } as CSSProperties} id="index-product">
+    <section ref={ref} data-step={s.key} style={{ visibility: "inherit", "--bg": s.bg, "--color": s.color, "--nav": s.color, "--accent": s.accent } as CSSProperties} className="index-product place-content-center relative [background-color:var(--bg)] [min-height:100svh] [@media(max-width:759px)]:[width:100vw] [opacity:1]" id="index-product">
       <div className="index-product-feature items-center absolute capitalize [flex-shrink:0] [inset:0px] [letter-spacing:-0.168rem]">
         <div className="[grid-area:1/1]" data-one="">
           <span>Fund life-</span>

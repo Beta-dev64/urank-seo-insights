@@ -4517,3 +4517,24 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
   transform: none !important; opacity: 1 !important; visibility: visible !important;
 }
 .index-how-heading { color: #fff !important; }
+
+/* Repair: desktop product steps driven by scroll position */
+@media (min-width: 760px) {
+  .index-product-track { height: 400svh; position: relative; }
+  .index-product { position: sticky !important; top: 0; height: 100svh; transition: background-color .5s ease; }
+  .index-product [data-one], .index-product [data-two], .index-product [data-three], .index-product [data-four] { transition: opacity .5s ease, filter .5s ease; }
+  .index-product:not([data-step="one"]) :is(.index-product-feature,.index-product-media,.index-product-details) > [data-one],
+  .index-product:not([data-step="two"]) :is(.index-product-feature,.index-product-media,.index-product-details) > [data-two],
+  .index-product:not([data-step="three"]) :is(.index-product-feature,.index-product-media,.index-product-details) > [data-three],
+  .index-product:not([data-step="four"]) :is(.index-product-feature,.index-product-media,.index-product-details) > [data-four] { opacity: 0 !important; visibility: hidden !important; }
+  .index-product[data-step="one"] :is(.index-product-feature,.index-product-media,.index-product-details) > [data-one],
+  .index-product[data-step="two"] :is(.index-product-feature,.index-product-media,.index-product-details) > [data-two],
+  .index-product[data-step="three"] :is(.index-product-feature,.index-product-media,.index-product-details) > [data-three],
+  .index-product[data-step="four"] :is(.index-product-feature,.index-product-media,.index-product-details) > [data-four] { opacity: 1 !important; visibility: visible !important; filter: none !important; }
+  .index-product :is(.index-product-feature,.index-product-media) > div > * { transform: none !important; clip-path: none !important; opacity: 1 !important; visibility: visible !important; }
+  .index-product[data-step="one"] .index-product-nav [data-one] i,
+  .index-product[data-step="two"] .index-product-nav [data-two] i,
+  .index-product[data-step="three"] .index-product-nav [data-three] i,
+  .index-product[data-step="four"] .index-product-nav [data-four] i { opacity: 1 !important; }
+}
+@media (max-width: 759px) { .index-product-track { display: contents; } }
