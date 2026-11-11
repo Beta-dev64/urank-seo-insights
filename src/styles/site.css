@@ -4573,3 +4573,10 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
 @media (max-width: 759px) {
   .index-testimonials-list > div { transform: translateX(calc(0rem - var(--slide, 0) * 39.93rem)); }
 }
+
+/* Repair: carousel alignment */
+.index-testimonials-list { place-content: start; }
+.index-testimonials-list > div { transform: translateX(calc(50vw - 18.15rem - var(--slide, 0) * 36.3rem)); }
+@media (max-width: 759px) {
+  .index-testimonials-list > div { transform: translateX(calc(50vw - 19.965rem - var(--slide, 0) * 39.93rem)); }
+}
