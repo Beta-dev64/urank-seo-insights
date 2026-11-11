@@ -27,6 +27,9 @@ function Index() {
       li.classList.toggle("active", i === slide);
       if (i !== slide) li.querySelector("video")?.pause();
     });
+    const track = document.querySelector<HTMLElement>(".index-testimonials-list > div");
+    const w = items[0]?.offsetWidth ?? 0;
+    if (track && w) track.style.transform = `translateX(${window.innerWidth / 2 - w / 2 - slide * w}px)`;
   }, [slide]);
   const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const t = e.target as HTMLElement;

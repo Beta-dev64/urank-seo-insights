@@ -4580,3 +4580,6 @@ figure:fullscreen .index-testimonials-fs { opacity: 1; }
 @media (max-width: 759px) {
   .index-testimonials-list > div { transform: translateX(calc(50vw - 19.965rem - var(--slide, 0) * 39.93rem)); }
 }
+
+/* Repair: let JS position the carousel track */
+.index-testimonials-list > div { transform: none; }
