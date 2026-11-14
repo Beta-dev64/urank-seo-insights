@@ -28,3 +28,5 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+Keep imported source material separate from the live branded homepage so new brand adaptations can replace the active experience without losing the original reference. This preserves import fidelity while allowing focused brand changes.

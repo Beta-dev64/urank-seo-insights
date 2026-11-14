@@ -2,11 +2,20 @@ import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/site.css?raw";
+import { KrediaLanding } from "@/components/kredia-landing";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "Rank - The Money App for Communities | Save, Invest \u0026 Build Wealth" }] }),
-  staticData: { importedDocument: { html: { "className": "lenis lenis-smooth", "lang": "en" }, body: {  } } },
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Kredia — Clear credit. Stronger business relationships." },
+      { name: "description", content: "Kredia helps companies track credit sales, send considerate reminders, collect payments, and build stronger distributor relationships." },
+      { property: "og:title", content: "Kredia — Clear credit. Stronger business relationships." },
+      { property: "og:description", content: "A clearer way to invoice, track balances, remind distributors, collect payments, and build trust." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: KrediaLanding,
 });
 
 function Index() {
